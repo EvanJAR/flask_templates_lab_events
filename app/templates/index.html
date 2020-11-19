@@ -5,7 +5,10 @@
 {% for event in events %}
 <div>
     <p>
-        {{ event.title }} : : <b>{{ event.description }}</b>
+        {{ event.name_of_event }} : : <b>{{ event.description }}</b>
+        {% if event.recurring %}
+            <span> 🐔 </span>
+        {% endif %}
     </p>
 </div>
 
